@@ -20,7 +20,7 @@ statuses = []
 
 already_following = []
 
-#follow_others is not currently working
+# follow_others is a work in progress
 def follow_others(requester):
 
     if str(requester) in already_following:
@@ -53,7 +53,7 @@ else:
     mentions = ()
     print 'no mentions, early end.'
 
-#If there are more recent mentions. The Bot returns a tweet randomly selected from a list of tweets
+# if there are more recent mentions, the Bot returns a tweet randomly selected from a list of tweets
 for mention in mentions:
     request = mention.text
     requester = mention.user.screen_name
